@@ -94,10 +94,12 @@ Actual Yes|7|18|25
 In k-means clustering,  to select the sigma values radial basis function we used the average distance between all points in the cluster and the cluster center
 Here, μ is the cluster centroid, m is the number of training samples belonging to this cluster, and x_i is the ith training sample in the cluster.
 
-
+![image](http://chrisjmccormick.files.wordpress.com/2013/08/variance_eq.png)
 
 	
-In the implementation some sigma values were zero ,so we had to  to fix those values in order to avoid gaussian function to infinity
+In the implementation some sigma values were zero ,so we had to  to fix those values in order to avoid gaussian function to infinity (see below equation)
+
+![image](http://chrisjmccormick.files.wordpress.com/2013/08/gaussian.png)
 
 ```java
 
@@ -108,30 +110,21 @@ if(sigma == 0){
 
 
 
-
-
-
-
-
-
 ##Finding inverse matrix
 
-Because we reduced the RBF neurons for inverse calculation we have  K*N matrix where   K< N	so we can’t calculate the inverse matrix in normal method 
+Because of the reduced  RBF neurons, for inverse calculation we have  K*N matrix where   K< N	so we can’t calculate the inverse matrix in normal method 
  
 w=ΦTy	
 
-So we had to use   Moore-Penrose Pseudoinverse  which was a generalization of the inverse matrix.[    		
+Use   Moore-Penrose Pseudoinverse  which was a generalization of the inverse matrix.[    		
 						
-w=(ΦTΦ) -1ΦTy   (if ΦTΦ   )
+w=(ΦTΦ) -1ΦTy   (if ΦTΦ  )
 
 Because native scala doesn't have a way to calculate inverse matrix we used “Breeze” which is a numerical processing library for Scala. We used pinv(a) to calculate inverse matrix in Moore-Penrose Pseudoinverse 
 					
 				
 			
 		
-
-
-
 
 
 
