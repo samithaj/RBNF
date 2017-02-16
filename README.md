@@ -1,5 +1,5 @@
 # RBNF
-Radial Basis Neural Network - Classification  for  Diagnosis of heart disease using Scala
+Radial Basis Function Network (Classification)  for  Diagnosis of heart disease using Scala
 
 #Dataset
 https://archive.ics.uci.edu/ml/datasets/Heart+Disease
