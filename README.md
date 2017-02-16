@@ -62,9 +62,9 @@ First removed columns (3 columns) which had many “?” characters, Then remove
 
 
 
-#Accuracy Testing
+#Accuracy 
 					
-
+Trained the network using different No of RBF neurons (centers) 
 
 No of clusters|Train Set|Test Set
 ---|---|---
@@ -75,18 +75,14 @@ No of clusters|Train Set|Test Set
 6|91.17647058823529|94.5945945945946
 
 
-#Confusion Matrix
 
-##When using centers as 3 for test set (40%)	
-  
-n=32|Predicted No|Predicted Yes|---
----|---|---|---
-Actual No|2|5|7
-Actual Yes|7|18|25
- |9|23|
 
 
 #Implementation details	
+
+##Architecture of an RBF Network
+
+![image](http://chrisjmccormick.files.wordpress.com/2013/08/architecture_simple2.png)
 
 
 ##Selecting sigma	
