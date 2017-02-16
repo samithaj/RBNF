@@ -1,8 +1,6 @@
 # RBNF
-Radial Basis Neural Network  for  Diagnosis of heart disease using Scala
-Objective
+Radial Basis Neural Network - Classification  for  Diagnosis of heart disease using Scala
 
-Implement a Radial Basis Neural Network Using Scala.
 
 
 
@@ -20,7 +18,7 @@ But in the processed.switzerland.data Diagnosis of heart disease (output) is giv
 
 #Pre processing:
 
-	The given dataset consist “?” at many data positions. Hence using a preprocessing script original data set has modified as processed dataset which excludes all “?” characters.
+The given dataset consist “?” at many data positions. Hence using a preprocessing script original data set has modified as processed dataset which excludes all “?” characters.
 First removed columns (3 columns) which had many “?” characters, Then removed rows which had “?” characters.
 
 DataSet Original
@@ -139,4 +137,5 @@ Because native scala doesn't have a way to calculate inverse matrix we used “B
 
 #References
 
-https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin	 	 		
+https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin
+http://mccormickml.com/2013/08/15/radial-basis-function-network-rbfn-tutorial/
