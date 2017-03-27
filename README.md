@@ -5,7 +5,7 @@ Radial Basis Function Network (Classification)  for  Diagnosis of heart disease 
 https://archive.ics.uci.edu/ml/datasets/Heart+Disease
 https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.switzerland.data
 
-##Assumptions
+## Assumptions
 
 In Complete attribute documentation for output they listed only o,1 for the output:
 
@@ -17,12 +17,12 @@ But in the processed.switzerland.data Diagnosis of heart disease (output) is giv
 											
 0 = not present; 1,2,3,4 = present 	[Therefore 0 categorized as 0 and 1,2,3,4 categorized as 1.]
 
-##Pre processing:
+## Pre processing:
 
 The given dataset consist “?” at many data positions. Hence using a preprocessing script original data set has modified as processed dataset which excludes all “?” characters.
 First removed columns (3 columns) which had many “?” characters, Then removed rows which had “?” characters.
 
-###DataSet Original
+### DataSet Original
 
 
 38,0,4,110,0,0,0,156,0,0,2,?,3,1
@@ -40,7 +40,7 @@ First removed columns (3 columns) which had many “?” characters, Then remove
 45,1,3,110,0,?,0,138,0,-.1,1,?,?,0
 46,1,4,100,0,?,1,133,0,-2.6,2,?,?,1
 
-###DataSet Preprocessed
+### DataSet Preprocessed
 
 32,1,1,95,0,0,127,0,.7,1,2
 36,1,4,110,0,0,125,1,1,2,2
@@ -62,7 +62,7 @@ First removed columns (3 columns) which had many “?” characters, Then remove
 
 
 
-#Accuracy 
+# Accuracy 
 					
 Trained the network using different No of RBF neurons (centers) 
 
@@ -78,14 +78,14 @@ No of clusters|Train Set|Test Set
 
 
 
-#Implementation details	
+# Implementation details	
 
-##Architecture of an RBF Network
+## Architecture of an RBF Network
 
 ![image](http://chrisjmccormick.files.wordpress.com/2013/08/architecture_simple2.png)
 
 
-##Selecting sigma	
+## Selecting sigma	
 
 In k-means clustering,  to select the sigma values radial basis function we used the average distance between all points in the cluster and the cluster center
 Here, μ is the cluster centroid, m is the number of training samples belonging to this cluster, and x_i is the ith training sample in the cluster.
@@ -106,7 +106,7 @@ if(sigma == 0){
 
 
 
-##Finding inverse matrix
+## Finding inverse matrix
 
 Because of the reduced  RBF neurons, for inverse calculation we have  K*N matrix where   K< N	so we can’t calculate the inverse matrix in normal method 
  
